@@ -11,6 +11,11 @@ namespace QuadaxAssessment
         static void Main()
         {
             Mastermind mastermind = new Mastermind();
+
+            while(mastermind.Attempts >= 0)
+            {
+                mastermind.MakeAttempt();
+            }
         }
     }
 }
