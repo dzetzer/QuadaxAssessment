@@ -10,11 +10,19 @@ namespace QuadaxAssessment
     {
         static void Main()
         {
-            Mastermind mastermind = new Mastermind();
-
-            while(mastermind.Attempts >= 0)
+            bool appRun = true;
+            while(appRun == true)
             {
-                mastermind.MakeAttempt();
+                Mastermind mastermind = new Mastermind();
+
+                while (mastermind.GameFinished == false)
+                {
+                    mastermind.MakeAttempt();
+                }
+
+                Console.WriteLine("Press Enter to restart the game");
+                Console.ReadLine();
+                Console.Clear();
             }
         }
     }
